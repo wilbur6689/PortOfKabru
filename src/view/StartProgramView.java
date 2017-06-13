@@ -16,10 +16,11 @@ import model.Player;
 public class StartProgramView extends View {
     
     public StartProgramView() {
-            super( "Hello world, your program is working "
-                    + "  "
-                    + "  "
-                    + "Please enter your name:  ");}
+            super( "You wake up feeling refreshed and ready to take on the whole galaxy "
+                    + "\n  "
+                    + "\n  "
+                    + "\n Please enter your name:  "
+                    + "\n ");}
     
     @Override
     public boolean doAction(String playersName) {
@@ -58,9 +59,9 @@ public class StartProgramView extends View {
                          + "\n ====================================="
                          );
         
-        PortMenuView portMenuView = new PortMenuView();
+        PortView portView = new PortView();
         
-        portMenuView.display();
+        portView.display();
     }
     
 }

@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Player;
 import view.ErrorView;
+import view.MainMenuView;
 
 /**
  *
@@ -32,7 +33,7 @@ public class PortOfKabru {
     
     public static void main(String[] args) {
         
-        StartProgramView startProgramView = null;
+        MainMenuView mainMenuView = null;
         
         try {
             
@@ -41,8 +42,9 @@ public class PortOfKabru {
             String filePath = "log.txt";
             PortOfKabru.logFile = new PrintWriter(filePath);
             
-            startProgramView = new StartProgramView ();
-            startProgramView.display();
+            mainMenuView = new MainMenuView();
+            mainMenuView.display();
+
         } catch (Throwable te) {
             ErrorView.display("StartProgramView","Error reading the input: " + te.getMessage() );
             te.printStackTrace();

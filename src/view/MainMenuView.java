@@ -9,13 +9,19 @@ package view;
  *
  * @author wilbur
  */
-public class PortMenuView extends View {
-    public PortMenuView() {
-        super("\n   N - Start a new game"
-            + "\n   L - Load Game"
-            + "\n   H - Get Help on how to play the game"
-            + "\n   Q - Quit"
-            + "\n------------------------------------------");
+public class MainMenuView extends View {
+    public MainMenuView() {
+        super("\n |-----------------------------------------------|   "
+            + "\n |                                               |"
+            + "\n |              The Port of Kabru                |"
+            + "\n |                                               |"
+            + "\n |-----------------------------------------------|"
+            + "\n |                                               |"
+            + "\n |   N - Start a new game                        |"
+            + "\n |   L - Load Game                               |"
+            + "\n |   H - Get Help on how to play the game        |"
+            + "\n |   Q - Quit                                    |"
+            + "\n |-----------------------------------------------|");
     }
     
     private String promptMessage;
@@ -43,7 +49,8 @@ public class PortMenuView extends View {
     }
 
     private void startNewGame() {
-        System.out.println("You have called the startNameGame Function");
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.display();
     }
 
     private void loadGame() {
