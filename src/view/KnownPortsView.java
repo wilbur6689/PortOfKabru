@@ -11,12 +11,11 @@ package view;
  */
 public class KnownPortsView extends View {
     public KnownPortsView() {
-        super("\n   |------------------------------------"
-            + "\n   | All your known Ports: "
+        super("\n   |-------------------------------------------------"
+            + "\n   | This section will list all of your known Ports: "
             + "\n   |    "
             + "\n   |  " 
-            + "\n   Q - Quit"
-            + "\n------------------------------------------");
+            + "\n   |---   Press Q   ---------------------------------");
     }
     
     @Override
