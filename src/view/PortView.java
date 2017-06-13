@@ -61,7 +61,8 @@ public class PortView extends View{
     }
 
     private void spaceDock() {
-        System.out.println("You have called a Function");
+        SpaceDockView dockView = new SpaceDockView();
+        dockView.display();
     }
 
     private void rumors() {

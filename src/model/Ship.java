@@ -14,8 +14,8 @@ import java.util.Objects;
 public class Ship implements Serializable {
     
     //class instance variables
-    private int currentSec;
-    private int prevSec;
+    private String currentSec;
+    private String prevSec;
     private int maxHealth;
     private int currentHealth;
     private int maxShields;
@@ -27,7 +27,7 @@ public class Ship implements Serializable {
     public Ship() {
     }
 
-    public Ship(int currentSec, int prevSec, int maxHealth, int currentHealth, int maxShields, int currentShields, int shipSpeed, int warpDist, int cargoBays) {
+    public Ship(String currentSec, String prevSec, int maxHealth, int currentHealth, int maxShields, int currentShields, int shipSpeed, int warpDist, int cargoBays) {
         this.currentSec = currentSec;
         this.prevSec = prevSec;
         this.maxHealth = maxHealth;
@@ -40,19 +40,19 @@ public class Ship implements Serializable {
     }
 
     
-    public int getCurrentSec() {
+    public String getCurrentSec() {
         return currentSec;
     }
 
-    public void setCurrentSec(int currentSec) {
+    public void setCurrentSec(String currentSec) {
         this.currentSec = currentSec;
     }
 
-    public int getPrevSec() {
+    public String getPrevSec() {
         return prevSec;
     }
 
-    public void setPrevSec(int prevSec) {
+    public void setPrevSec(String prevSec) {
         this.prevSec = prevSec;
     }
 

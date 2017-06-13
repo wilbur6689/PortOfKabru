@@ -45,7 +45,8 @@ public class SpaceDockView extends View {
     }
 
     private void yourShip() {
-        this.console.println("you have selected to examain your ship");
+        PlayerShipView shipView = new PlayerShipView();
+        shipView.display();
     }
 
     private void upgrade() {

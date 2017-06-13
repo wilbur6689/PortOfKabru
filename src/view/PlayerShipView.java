@@ -14,9 +14,9 @@ import portofkabru.PortOfKabru;
 public class PlayerShipView extends View {
     
     public PlayerShipView() {
-        super("\n   |---------------------------------------------------|"
-            + "\n   |     Your Ship:                                    |"
-            + "\n   |                                                   |"
+        super("\n   |---------------------------------------------------"
+            + "\n   |     Your Ship:                                    "
+            + "\n   |                                                   "
             + "\n   |  Health:            " + PortOfKabru.getPlayer().getShip().getCurrentHealth()
             + "\n   |  Sheilds:           " + PortOfKabru.getPlayer().getShip().getCurrentShields()
             + "\n   |  Total Cargo Bays:  " + PortOfKabru.getPlayer().getShip().getCargoBays()
@@ -28,8 +28,7 @@ public class PlayerShipView extends View {
             + "\n   |  Previous Sector:   " + PortOfKabru.getPlayer().getShip().getPrevSec()
             + "\n   |          "
             + "\n   |          "
-            + "\n   |  -- Press Q --"
-            + "\n------------------------------------------");
+            + "\n   | ---   Press Q   ----------------------------------");
     }
     
     @Override

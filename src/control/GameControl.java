@@ -43,12 +43,12 @@ public class GameControl {
        Ship ship = new Ship();
        ship.setCurrentHealth(100);
        ship.setMaxHealth(100);
-       ship.setCurrentSec(0200);
+       ship.setCurrentSec("0200");
        ship.setMaxShields(10);
        ship.setCurrentShields(10);
        ship.setShipSpeed(1);
        ship.setWarpDist(50);
-       ship.setPrevSec(0200);
+       ship.setPrevSec("0200");
        
        return ship;
     }
