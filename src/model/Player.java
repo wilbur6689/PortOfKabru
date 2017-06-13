@@ -16,6 +16,7 @@ public class Player implements Serializable {
     
     private String name;
     private Game game;
+    private Ship ship;
 
     public Player() {
     }
@@ -35,6 +36,15 @@ public class Player implements Serializable {
     public void setGame(Game game) {
         this.game = game;
     }
+
+    public Ship getShip() {
+        return ship;
+    }
+
+    public void setShip(Ship ship) {
+        this.ship = ship;
+    }
+    
 
     @Override
     public int hashCode() {
@@ -63,8 +73,10 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", game=" + game + '}';
+        return "Player{" + "name=" + name + ", game=" + game + ", ship=" + ship + '}';
     }
+
+    
     
     
     

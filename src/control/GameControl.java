@@ -29,8 +29,27 @@ public class GameControl {
         }
 
         Player player = new Player();
+        Ship ship = createStartShip();
         player.setName(name);
+        player.setShip(ship);
+        
+        
         PortOfKabru.setPlayer(player); //save the player  
+        
         return player;
+    }
+    
+    public static Ship createStartShip() {
+       Ship ship = new Ship();
+       ship.setCurrentHealth(100);
+       ship.setMaxHealth(100);
+       ship.setCurrentSec(0200);
+       ship.setMaxShields(10);
+       ship.setCurrentShields(10);
+       ship.setShipSpeed(1);
+       ship.setWarpDist(50);
+       ship.setPrevSec(0200);
+       
+       return ship;
     }
 }

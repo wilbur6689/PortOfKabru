@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Game;
 import model.Player;
 import view.ErrorView;
 import view.MainMenuView;
@@ -30,6 +31,7 @@ public class PortOfKabru {
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
     private static Player player = null;
+    private static Game currentGame = null;
     
     public static void main(String[] args) {
         
@@ -82,5 +84,19 @@ public class PortOfKabru {
     public static void setPlayer(Player player) {
         PortOfKabru.player = player;
     }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        PortOfKabru.currentGame = currentGame;
+    }
+    
+    
     
 }

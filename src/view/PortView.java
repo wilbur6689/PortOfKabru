@@ -12,11 +12,10 @@ package view;
 public class PortView extends View{
     
     public PortView() {
-        super("\n   S - Space Warp"
+        super("\n   w - Warp to sector"
             + "\n   K - Known Ports"
-            + "\n   T - Trade with the locals"
-            + "\n   W - Work on your Space Ship"
-            + "\n   B - Buy new Space Ship"
+            + "\n   T - Trade goods with the locals"
+            + "\n   S - Space Dock"
             + "\n   R - Rumors"
             + "\n   Q - Quit"
             + "\n------------------------------------------");
@@ -27,20 +26,17 @@ public class PortView extends View{
         value = value.toUpperCase(); //convert choice to upper case
 
         switch (value) {
-            case "S": // create and start a new game
+            case "W": // warp to a new sector 
                 this.spaceWarp();
                 break;
-            case "K": // load players game
+            case "K": // lists all the known space ports to the player
                 this.knowPorts();
                 break;
-            case "T": //help menu
-                this.trade();
+            case "T": // shows a list of goods
+                this.tradeGoods();
                 break;
-            case "W": // create and start a new game
-                this.workOnShip();
-                break;
-            case "B": // load players game
-                this.buyShip();
+            case "S": // go to the space dock to work on your ship
+                this.spaceDock();
                 break;
             case "R": //help menu
                 this.rumors();
@@ -60,15 +56,11 @@ public class PortView extends View{
         System.out.println("You have called a Function");
     }
 
-    private void trade() {
+    private void tradeGoods() {
         System.out.println("You have called a Function");
     }
 
-    private void workOnShip() {
-        System.out.println("You have called a Function");
-    }
-
-    private void buyShip() {
+    private void spaceDock() {
         System.out.println("You have called a Function");
     }
 
