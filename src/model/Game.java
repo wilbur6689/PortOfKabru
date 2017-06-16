@@ -13,20 +13,21 @@ import java.util.Objects;
  * @author wilbur
  */
 public class Game implements Serializable {
-    private String main;
+    private Player player;
     private Ship ship;
+    private Universe universe;
     private boolean endOfGame = false;
     
     public Game() {
         
     }
 
-    public String getMain() {
-        return main;
+    public Player getPlayer() {
+        return player;
     }
 
-    public void setMain(String main) {
-        this.main = main;
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
     public Ship getShip() {
@@ -37,6 +38,16 @@ public class Game implements Serializable {
         this.ship = ship;
     }
 
+    public Universe getUniverse() {
+        return universe;
+    }
+
+    public void setUniverse(Universe universe) {
+        this.universe = universe;
+    }
+    
+    
+
     public boolean isEndOfGame() {
         return endOfGame;
     }
@@ -44,37 +55,7 @@ public class Game implements Serializable {
     public void setEndOfGame(boolean endOfGame) {
         this.endOfGame = endOfGame;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 59 * hash + Objects.hashCode(this.main);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Game other = (Game) obj;
-        if (!Objects.equals(this.main, other.main)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "Game{" + "main=" + main + ", ship=" + ship + ", endOfGame=" + endOfGame + '}';
-    }
-    
+   
     
     
 }

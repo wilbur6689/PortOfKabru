@@ -6,10 +6,18 @@
 package view;
 
 import control.UniverseControl;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import static java.lang.Integer.parseInt;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import model.Game;
 import model.Quadrant;
 import model.Sector;
 import model.Universe;
+import portofkabru.PortOfKabru;
 
 /**
  *
@@ -18,17 +26,24 @@ import model.Universe;
 public class QuadView extends View{
     
     public QuadView() {
-        super("\n   L - List Known Sectors"
+        super("\n   G - List number of Galaxies"
+            + "\n   S - List number of Sectors"
             + "\n   Q - Quit"
             + "\n------------------------------------------");
     }
+    
+    
     
     @Override
     public boolean doAction(String value) {
         value = value.toUpperCase(); //convert choice to upper case
 
         switch (value) {
-            case "L": // warp to a new sector 
+   
+            case "G": // warp to a new sector 
+                this.listGal();
+                break;
+            case "S": // warp to a new sector 
                 this.listSectors();
                 break;
             
@@ -39,11 +54,20 @@ public class QuadView extends View{
         return false;
     }
 
+
+    private void listGal() {
+        
+        int galNum = PortOfKabru.getCurrentGame().getUniverse().getNumbOfGalaxies();
+        System.out.println("here is the number of Galaxies: " + galNum);
+    }
+    
     private void listSectors() {
         
+        int galNum = PortOfKabru.getCurrentGame().getUniverse().getNumbOfGalaxies();
         
-        Universe universe = UniverseControl.createUniverse();
+        int secNum = (galNum*4)*11;
+        System.out.println(secNum);
         
-        System.out.println(universe);
+        
     }
 }

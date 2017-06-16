@@ -81,14 +81,6 @@ public class PortOfKabru {
         return inFile;
     }
 
-    public static void setPlayer(Player player) {
-        PortOfKabru.player = player;
-    }
-
-    public static Player getPlayer() {
-        return player;
-    }
-
     public static Game getCurrentGame() {
         return currentGame;
     }

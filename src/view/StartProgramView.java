@@ -8,6 +8,7 @@ package view;
 import control.GameControl;
 import exceptions.GameControlException;
 import model.Player;
+import portofkabru.PortOfKabru;
 
 /**
  *
@@ -34,8 +35,8 @@ public class StartProgramView extends View {
         Player player = null;
         
         try {
-            // Call createPlayer() control function
-            player = GameControl.createPlayer(playersName);
+            // Call createGame() control function
+            player = GameControl.createGame(playersName);
             }
             catch (GameControlException me){
                 this.console.println(me.getMessage());
@@ -58,7 +59,7 @@ public class StartProgramView extends View {
                          + "\n We hope you have a lot of fun!"
                          + "\n ====================================="
                          );
-        
+        PortOfKabru.getCurrentGame().setPlayer(player);
         PortView portView = new PortView();
         
         portView.display();

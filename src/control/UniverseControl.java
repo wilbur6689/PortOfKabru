@@ -13,6 +13,7 @@ import model.Galaxy;
 import model.Quadrant;
 import model.Sector;
 import model.Universe;
+import portofkabru.PortOfKabru;
 
 /**
  *
@@ -20,18 +21,16 @@ import model.Universe;
  */
 public class UniverseControl {
     
-    public static Universe createUniverse() {
+    public static Universe createUniverse(int galNum) {
         
-        Universe universe = new Universe();
-           
-        //int galaxyNum = universe.getNumbOfGalaxies();
-        int galaxyNum = 10;
+        Universe universe = new Universe();        
+        universe.setNumbOfGalaxies(galNum);
+        universe.setUnivName("The Great Universe!!");
         
-        for(int h=0;h<galaxyNum;h++) {
         Set<Galaxy> galSet = new LinkedHashSet<Galaxy>();
             
             //this generates all the galaxies 
-            for(int i=0;i<5;i++){    
+            for(int i=0;i<galNum;i++){    
                 int quadNum = 01;                 
                 Set<Quadrant> quadSet = new LinkedHashSet<Quadrant>();
                 
@@ -43,7 +42,7 @@ public class UniverseControl {
                     //this will generate all the sectors and their name.
                     for(int k=0;k<5;k++) {
                         Sector sector = new Sector();
-                        sector.setSecName("G" + galaxyNum + "Q" + quadNum + "S" + secNum);
+                        sector.setSecName("G" + galNum + "Q" + quadNum + "S" + secNum);
                         sectorSet.add(sector);
                         secNum++;
                     }
@@ -57,12 +56,11 @@ public class UniverseControl {
             
             Galaxy galaxy = new Galaxy();
             galaxy.setQuadrants(quadSet);
-            galaxy.setName("Gal" + galaxyNum);
+            galaxy.setName("Gal" + galNum);
             System.out.println("you have just added a new Galaxy \n");
             galSet.add(galaxy);
             }
         universe.setGalaxies(galSet);
-        }
         return universe;
     }
     

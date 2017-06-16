@@ -17,15 +17,15 @@ public class PlayerShipView extends View {
         super("\n   |---------------------------------------------------"
             + "\n   |     Your Ship:                                    "
             + "\n   |                                                   "
-            + "\n   |  Health:            " + PortOfKabru.getPlayer().getShip().getCurrentHealth()
-            + "\n   |  Sheilds:           " + PortOfKabru.getPlayer().getShip().getCurrentShields()
-            + "\n   |  Total Cargo Bays:  " + PortOfKabru.getPlayer().getShip().getCargoBays()
+            + "\n   |  Health:            " + PortOfKabru.getCurrentGame().getPlayer().getShip().getCurrentHealth()
+            + "\n   |  Sheilds:           " + PortOfKabru.getCurrentGame().getPlayer().getShip().getCurrentShields()
+            + "\n   |  Total Cargo Bays:  " + PortOfKabru.getCurrentGame().getPlayer().getShip().getCargoBays()
             + "\n   |     " 
-            + "\n   |  Warp Speed:        " + PortOfKabru.getPlayer().getShip().getShipSpeed()
-            + "\n   |  Warp Distance:     " + PortOfKabru.getPlayer().getShip().getWarpDist()
+            + "\n   |  Warp Speed:        " + PortOfKabru.getCurrentGame().getPlayer().getShip().getShipSpeed()
+            + "\n   |  Warp Distance:     " + PortOfKabru.getCurrentGame().getPlayer().getShip().getWarpDist()
             + "\n   |          "
-            + "\n   |  Current Sector:    " + PortOfKabru.getPlayer().getShip().getCurrentSec()
-            + "\n   |  Previous Sector:   " + PortOfKabru.getPlayer().getShip().getPrevSec()
+            + "\n   |  Current Sector:    " + PortOfKabru.getCurrentGame().getPlayer().getShip().getCurrentSec()
+            + "\n   |  Previous Sector:   " + PortOfKabru.getCurrentGame().getPlayer().getShip().getPrevSec()
             + "\n   |          "
             + "\n   |          "
             + "\n   | ---   Press Q   ----------------------------------");
