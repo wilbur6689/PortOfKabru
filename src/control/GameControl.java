@@ -18,6 +18,7 @@ import java.util.Set;
 
 import model.Player;
 import model.Game;
+import model.Quadrant;
 import model.Ship;
 import model.Universe;
 import portofkabru.PortOfKabru;
@@ -35,9 +36,9 @@ public class GameControl {
         }
         Game game = new Game();        
         Player player = new Player();
-        Ship ship = createStartShip();
-        Universe universe = createNewUniverse();
         
+        Universe universe = createNewUniverse();
+        Ship ship = createStartShip(universe);
         player.setName(name);
         player.setShip(ship);
         
@@ -48,8 +49,10 @@ public class GameControl {
         return player;
     }
     
-    public static Ship createStartShip() {
+    public static Ship createStartShip(Universe universe) {
+      
        Ship ship = new Ship();
+       
        ship.setCurrentHealth(100);
        ship.setMaxHealth(100);
        ship.setCurrentSec("0200");

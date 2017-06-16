@@ -13,6 +13,7 @@ import static java.lang.Integer.parseInt;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Galaxy;
 import model.Game;
 import model.Quadrant;
 import model.Sector;
@@ -28,6 +29,7 @@ public class QuadView extends View{
     public QuadView() {
         super("\n   G - List number of Galaxies"
             + "\n   S - List number of Sectors"
+            + "\n   L - List everything"
             + "\n   Q - Quit"
             + "\n------------------------------------------");
     }
@@ -46,7 +48,9 @@ public class QuadView extends View{
             case "S": // warp to a new sector 
                 this.listSectors();
                 break;
-            
+            case "L": // warp to a new sector 
+                this.Everything();
+                break;
             default:
                 this.console.println("\n*** Invalid selection *** Try again");
 
@@ -57,7 +61,10 @@ public class QuadView extends View{
 
     private void listGal() {
         
-        int galNum = PortOfKabru.getCurrentGame().getUniverse().getNumbOfGalaxies();
+        Universe universe = PortOfKabru.getCurrentGame().getUniverse();
+        Set<Galaxy> galaxies = universe.getGalaxies();
+        
+        int galNum = galaxies.size();
         System.out.println("here is the number of Galaxies: " + galNum);
     }
     
@@ -69,5 +76,12 @@ public class QuadView extends View{
         System.out.println(secNum);
         
         
+    }
+
+    private void Everything() {
+        Universe universe = PortOfKabru.getCurrentGame().getUniverse();
+        Set<Galaxy> galaxies = universe.getGalaxies();
+        
+        //need to figure out how to access everything in the set of sets
     }
 }

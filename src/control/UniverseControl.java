@@ -63,6 +63,7 @@ public class UniverseControl {
         universe.setGalaxies(galSet);
         return universe;
     }
+
     
     public void linkSectors() {
         
