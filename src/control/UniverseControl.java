@@ -64,24 +64,9 @@ public class UniverseControl {
     public void linkSectors() {
         
         
-        // first I have to create 11 sectors that will be assigned to a quadrant
-            
-            for(int secCount=0;secCount<12;secCount++) {
-                Sector sector = new Sector();
-                    int galaxyNub = 01;
-                    int quadNub = 01;
-                    int secNub = 01;
-                    sector.setPortName("G" + galaxyNub + "Q" + quadNub + "S" + secNub);
-                    
-                    //here I will need to add the newly created sector to an array thats stored in the quadrant
-                    secNub++;
-                        
-            }
-        // next I have to create the 4 quadrants and assign them to a galaxy
+        // I will have to create a funtion that will loop through all the created galaxies, quadrants, and sectors        
+        // and then connect all the different sectors together.
         
-        // next I have to take all the galaxies and assign them to the universe. 
-        
-        // next I have to connect all the different sectors together
         
             /*here is how the sectors connect in a single quadrant:
             *
