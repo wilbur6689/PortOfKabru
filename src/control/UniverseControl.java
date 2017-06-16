@@ -67,6 +67,8 @@ public class UniverseControl {
         // I will have to create a funtion that will loop through all the created galaxies, quadrants, and sectors        
         // and then connect all the different sectors together.
         
+        // Each quadrant will follow the same pattern as show below
+        // I will just need to increase the number on the galaxy and quadrant. 
         
             /*here is how the sectors connect in a single quadrant:
             *
