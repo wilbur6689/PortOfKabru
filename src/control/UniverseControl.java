@@ -47,14 +47,19 @@ public class UniverseControl {
                         sectorSet.add(sector);
                         secNum++;
                     }
-                quadNum++;
+                
                 Quadrant quadrant = new Quadrant();
                 quadrant.setSectors(sectorSet);
+                quadrant.setName("Quad" + quadNum);                
                 quadSet.add(quadrant);
+                quadNum++;
                 }
-            galaxyNum++;
+            
             Galaxy galaxy = new Galaxy();
-            galaxy.setQuadrants(quadSet);          
+            galaxy.setQuadrants(quadSet);
+            galaxy.setName("Gal" + galaxyNum);
+            System.out.println("you have just added a new Galaxy \n");
+            galSet.add(galaxy);
             }
         universe.setGalaxies(galSet);
         }

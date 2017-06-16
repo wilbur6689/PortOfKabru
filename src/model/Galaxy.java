@@ -13,6 +13,7 @@ import java.util.Set;
  */
 public class Galaxy {
     private Set<Quadrant> quadrants;
+    private String name;
 
     public Galaxy() {
     }
@@ -23,6 +24,14 @@ public class Galaxy {
 
     public void setQuadrants(Set<Quadrant> quadrants) {
         this.quadrants = quadrants;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
      
