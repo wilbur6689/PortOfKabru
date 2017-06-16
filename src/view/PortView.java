@@ -53,7 +53,8 @@ public class PortView extends View{
     }
 
     private void knowPorts() {
-        System.out.println("You have called a Function");
+        QuadView quadView = new QuadView();
+        quadView.display();
     }
 
     private void tradeGoods() {

@@ -12,19 +12,48 @@ package model;
 public class Sector {
     
     //class instance variables
-    private int secNumber;
+    private String secName;
     private String portName;
+    private int secCon1; //this is the first connection 
+    private int secCon2;
+    private int secCon3;
 
     public Sector() {
     }
 
-    public int getSecNumber() {
-        return secNumber;
+    public String getSecName() {
+        return secName;
     }
 
-    public void setSecNumber(int secNumber) {
-        this.secNumber = secNumber;
+    public void setSecName(String secName) {
+        this.secName = secName;
     }
+
+    public int getSecCon1() {
+        return secCon1;
+    }
+
+    public void setSecCon1(int secCon1) {
+        this.secCon1 = secCon1;
+    }
+
+    public int getSecCon2() {
+        return secCon2;
+    }
+
+    public void setSecCon2(int secCon2) {
+        this.secCon2 = secCon2;
+    }
+
+    public int getSecCon3() {
+        return secCon3;
+    }
+
+    public void setSecCon3(int secCon3) {
+        this.secCon3 = secCon3;
+    }
+
+    
 
     public String getPortName() {
         return portName;
